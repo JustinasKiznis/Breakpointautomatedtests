@@ -24,6 +24,7 @@
     </build>
 
     <properties>
+        <suite></suite>
         <selenium.version>3.141.59</selenium.version>
         <testng.version>7.3.0</testng.version>
         <webdrivermanager.version>4.2.2</webdrivermanager.version>
