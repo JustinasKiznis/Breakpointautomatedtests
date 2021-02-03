@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.ComponentUtils;
 
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -18,12 +19,15 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() {
-
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://festodeskmanagementqa.azurewebsites.net/");
     }
 
     @AfterMethod
     public void teardown(ITestResult result) throws IOException {
-
+        driver.quit();
     }
 
 }

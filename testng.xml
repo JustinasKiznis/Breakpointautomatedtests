@@ -2,7 +2,8 @@
 <suite name="TestNG Test">
     <test name="TestNG Test">
         <classes>
-
+            <class name="tests.BaseTest"/>
+            <class name="tests.LoginTest"/>
         </classes>
     </test>
 </suite>
