@@ -27,12 +27,12 @@ public class LoginPage {
     public void loginWithCredentials(String email, String password) {
         enterEmailAddress(email);
         clickEmailSubmitButton();
-        WaitUtils.waitMiliseconds(1000);
+        WaitUtils.waitMiliseconds(1500);
         enterPassword(password);
         clickLoginButton();
-        WaitUtils.waitMiliseconds(1000);
+        WaitUtils.waitMiliseconds(1500);
         clickContinueLoginButton();
-        WaitUtils.waitMiliseconds(1000);
+        WaitUtils.waitMiliseconds(1500);
     }
 
     public void clickEmailSubmitButton(){
