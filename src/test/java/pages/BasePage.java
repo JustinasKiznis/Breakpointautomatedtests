@@ -13,16 +13,24 @@ public class BasePage {
     }
 
     //----------Locators-----------------
-    By userLoginType = new By.ByXPath("//*[@id=\"root\"]/div/div[1]/nav/ul/li[1]");
+    By userLoginType = new By.ByXPath("//*[@id=\"root\"]/div/header/div/nav/ul/li[1]");
 
 
     public String getUserType()
     {
         String text = driver.findElement(userLoginType).getText();
-        String type[] = text.split(" ");
+        String userinfo[] = text.split("|");
 
-        return type[type.length -1];
+        String userType = "";
+        for(int i = 0; i < userinfo.length; i++)
+        {
+            if (userinfo[i].equals("|") && userType.equals("")){
+                userType = userinfo[i+1];
+            }
+        }
+        return userType;
     }
+
 
 
 }
