@@ -17,6 +17,7 @@ public class LoginTest extends BaseTest {
         WaitUtils.waitMiliseconds(2000);
 
         String email = "testas@gmail.com";
+
         String password = "testas";
 
         loginPage.loginWithCredentials(email,password);
