@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.WaitUtils;
 
 import java.sql.SQLOutput;
 
@@ -13,22 +14,16 @@ public class BasePage {
     }
 
     //----------Locators-----------------
-    By userLoginType = new By.ByXPath("//*[@id=\"root\"]/div/header/div/nav/ul/li[1]");
+    By userLoginType = new By.ByXPath("/html/body/div/header/div/nav/ul/li[1]");
 
 
     public String getUserType()
     {
+        WaitUtils.waitUntilElementDisplayed(driver, 5, userLoginType);
         String text = driver.findElement(userLoginType).getText();
-        String userinfo[] = text.split("|");
+        String userinfo[] = text.split(" \\| ");
 
-        String userType = "";
-        for(int i = 0; i < userinfo.length; i++)
-        {
-            if (userinfo[i].equals("|") && userType.equals("")){
-                userType = userinfo[i+1];
-            }
-        }
-        return userType;
+        return userinfo[1];
     }
 
 
