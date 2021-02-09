@@ -18,6 +18,7 @@ public class LoginTest extends BaseTest {
 
         String email = "testas@gmail.com";
 
+
         String password = "testas";
 
         loginPage.loginWithCredentials(email,password);
