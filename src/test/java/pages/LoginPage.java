@@ -25,14 +25,14 @@ public class LoginPage {
     By messageBlock = By.id("passwordError");
 
     public void loginWithCredentials(String email, String password) {
+        WaitUtils.waitUntilElementClickable(driver, 5, emailInputField);
         enterEmailAddress(email);
         clickEmailSubmitButton();
-        WaitUtils.waitMiliseconds(2000);
+        WaitUtils.waitUntilElementClickable(driver, 5, passwordInputField);
         enterPassword(password);
         clickLoginButton();
-        WaitUtils.waitMiliseconds(2000);
+        WaitUtils.waitUntilElementClickable(driver, 5, continueLoginButton);
         clickContinueLoginButton();
-        WaitUtils.waitMiliseconds(2000);
     }
 
     public void clickEmailSubmitButton(){

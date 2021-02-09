@@ -5,8 +5,7 @@ import pages.BasePage;
 import pages.LoginPage;
 import utils.WaitUtils;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class LoginTest extends BaseTest {
 
@@ -14,16 +13,14 @@ public class LoginTest extends BaseTest {
     public void loginWrongCredentials(){
         LoginPage loginPage = new LoginPage(driver);
 
-        WaitUtils.waitMiliseconds(2000);
+        //WaitUtils.waitMiliseconds(2000);
 
         String email = "testas@gmail.com";
-
-
         String password = "testas";
 
         loginPage.loginWithCredentials(email,password);
         Boolean errorAreDisplayed = loginPage.getMessage();
-        assertTrue(errorAreDisplayed, "User failed to login");
+        assertFalse(errorAreDisplayed, "User failed to login");
     }
 
     @Test
@@ -31,7 +28,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         BasePage BasePage = new BasePage(driver);
 
-        WaitUtils.waitMiliseconds(2000);
+        //WaitUtils.waitMiliseconds(2000);
 
         String email = "admin.test@kitm.lt";
         String password = "Akademija20";
@@ -48,7 +45,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         BasePage BasePage = new BasePage(driver);
 
-        WaitUtils.waitMiliseconds(2000);
+       //WaitUtils.waitMiliseconds(2000);
 
         String email = "regularuser.test@kitm.lt";
         String password = "Akademija20";
@@ -65,7 +62,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         BasePage BasePage = new BasePage(driver);
 
-        WaitUtils.waitMiliseconds(2000);
+        //WaitUtils.waitMiliseconds(2000);
 
         String email = "teamlead.test@kitm.lt";
         String password = "Akademija20";
