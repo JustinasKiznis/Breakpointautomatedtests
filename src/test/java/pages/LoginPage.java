@@ -24,6 +24,20 @@ public class LoginPage {
 
     By messageBlock = By.id("passwordError");
 
+    //--------Methods----------
+
+    public void loginAsRegularUser() {
+        loginWithCredentials("regularuser.test@kitm.lt", "Akademija20");
+    }
+
+    public void loginAsTeamLead() {
+        loginWithCredentials("teamlead.test@kitm.lt", "Akademija20");
+    }
+
+    public void loginAsAdmin() {
+        loginWithCredentials("admin.test@kitm.lt", "Akademija20");
+    }
+
     public void loginWithCredentials(String email, String password) {
         WaitUtils.waitUntilElementClickable(driver, 5, emailInputField);
         enterEmailAddress(email);
