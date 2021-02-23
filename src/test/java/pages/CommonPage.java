@@ -37,12 +37,12 @@ public class CommonPage extends BasePage {
     public ArrayList<String> getVisibleHeaderMenuLinks() {
         if (ComponentUtils.getScreenWidth(driver) < 1200) clickMenuToggleButton();
         List<WebElement> links = headerLeftMenu().findElements(headerLeftMenuLinks);
-        ArrayList<String> visibleLeftMenuLinks = new ArrayList<String>();
+        ArrayList<String> visibleHeaderMenuLinks = new ArrayList<String>();
         for (WebElement link : links) {
             String linkName = link.getText();
-            visibleLeftMenuLinks.add(linkName);
+            visibleHeaderMenuLinks.add(linkName);
         }
-        return visibleLeftMenuLinks;
+        return visibleHeaderMenuLinks;
     }
 
     /**
