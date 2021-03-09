@@ -4,6 +4,7 @@
         <packages>
             <package name="tests.LoginTests"/>
             <package name="tests.AuthorizationTests"/>
+            <package name="tests.BookingTests"/>
         </packages>
     </test>
 </suite>
