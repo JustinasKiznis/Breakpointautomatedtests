@@ -26,7 +26,7 @@ public class AdminAuthorizationTest extends BaseTest {
 
         WaitUtils.waitUntilElementPresent(driver, 5, commonPage.getHeader());
         ArrayList<String> visibleHeaderMenuLinks = commonPage.getVisibleHeaderMenuLinks();
-        ArrayList<String> adminHeaderMenuLinks = new ArrayList<String>(Arrays.asList("Home", "Rooms", "Admin Panel", "Reports"));
+        ArrayList<String> adminHeaderMenuLinks = new ArrayList<String>(Arrays.asList("Home", "Rooms", "Settings", "Reports"));
         assertEquals(visibleHeaderMenuLinks.size(), 4);
         assertEquals(visibleHeaderMenuLinks, adminHeaderMenuLinks);
     }
