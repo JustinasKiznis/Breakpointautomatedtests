@@ -18,7 +18,9 @@ public class TeamLeadLoginTest extends BaseTest {
 
         String email = "teamlead.test@kitm.lt";
         String password = "Akademija20";
+
         String userType = "Teamlead";
+
 
         loginPage.loginWithCredentials(email,password);
 

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.ComponentUtils;
+import utils.WaitUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,8 @@ public class CommonPage extends BasePage {
     By headerLeftMenu = By.cssSelector(".Header_navUl__3mtCC");
     By headerLeftMenuLinks = By.cssSelector("a[class*='Header']");
     By headerToggleButton = By.cssSelector(".navbar-toggler");
+    By roomsDropdown = By.linkText("Rooms");
+    By room = By.cssSelector(".dropdown-item");
 
     //----------------------WebElements----------------------
     public WebElement headerLeftMenu() {
@@ -50,6 +53,16 @@ public class CommonPage extends BasePage {
      */
     public void clickMenuToggleButton(){
         driver.findElement(headerToggleButton).click();
+    }
+
+    /**
+     * Navigates to first room from Rooms dropdown
+     */
+    public void navigateToBookingPage() {
+        WaitUtils.waitUntilElementPresent(driver, 5, header);
+        driver.findElement(roomsDropdown).click();
+        WaitUtils.waitUntilElementPresent(driver, 5, room);
+        driver.findElement(room).click();
     }
 
 }
