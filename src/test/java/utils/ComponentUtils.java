@@ -15,4 +15,14 @@ public class ComponentUtils {
         return dimension.width;
     }
 
+    /**
+     * Opens the specified URL in the browser
+     *
+     * @param driver Webdriver
+     * @param url specific URL
+     */
+    public static void openPage(WebDriver driver, String url) {
+        driver.get(url);
+    }
+
 }

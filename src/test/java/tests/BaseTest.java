@@ -3,21 +3,13 @@ package tests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import utils.ComponentUtils;
-
-
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
-    WebDriver driver;
-    WebDriverWait wait;
+    public WebDriver driver;
 
-    @BeforeMethod
+    @BeforeClass
     public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -25,9 +17,8 @@ public class BaseTest {
         driver.get("https://festodeskmanagementqa.azurewebsites.net/");
     }
 
-    @AfterMethod
-    public void teardown(ITestResult result) throws IOException {
+    @AfterClass
+    public void teardown() {
         driver.quit();
     }
-
 }
