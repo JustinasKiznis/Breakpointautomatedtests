@@ -130,7 +130,7 @@ public class AdminPage {
         ////scroll to the top of the page
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)");
 
-        percentage = imageCorrectPixels / imgPixelCount;
+        percentage = imageCorrectPixels / imgPixelCount * 100;
         return percentage;
     }
 
