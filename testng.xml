@@ -25,6 +25,7 @@
         </packages>
     </test>
     <test name="Admin test">
+        <parameter name="browser" value="Chrome"/>
         <packages>
             <package name="tests.AdminTests"/>
         </packages>
