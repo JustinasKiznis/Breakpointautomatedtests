@@ -24,4 +24,9 @@
             <package name="tests.BookingTests"/>
         </packages>
     </test>
+    <test name="Admin test">
+        <packages>
+            <package name="tests.AdminTests"/>
+        </packages>
+    </test>
 </suite>
