@@ -1,6 +1,8 @@
 package tests.LoginTests;
 
+
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.LoginPage;
@@ -14,6 +16,7 @@ public class NegativeLoginTest extends BaseTest {
     @Test
     public void loginWrongCredentials(){
         LoginPage loginPage = new LoginPage(driver);
+
         boolean logged = true;
         //WaitUtils.waitMiliseconds(2000);
         try {
