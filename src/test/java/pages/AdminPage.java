@@ -37,8 +37,8 @@ public class AdminPage {
     //--------Locators-----------------------------------------------------------
     //--------Navigation---------
     By adminPanel = new By.ByXPath("//a[contains(text(),'Settings')]");
-    By createRoomMenuButton = new By.ByXPath("//a[contains(text(),'Create room')]");
-    By createWorkplacesMenuButton = new By.ByXPath("//a[contains(text(),'Create workplaces')]");
+    By createRoomMenuButton = new By.ByXPath("//a[contains(text(),'Rooms maintenance')]");
+    By createWorkplacesMenuButton = new By.ByXPath("//a[contains(text(),'Workplaces maintenance')]");
 
     //-------Create-room--------
     By newRoomButton = new By.ByXPath("//button[contains(text(),'New')]");
